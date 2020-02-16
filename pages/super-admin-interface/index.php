@@ -83,6 +83,9 @@ if (!isset($_SESSION["Nome"]) || !($_SESSION["TipoUtente"] == "Super amministrat
                     <br><br>
                     <button class="w3-button w3-black" style="width: 200px;" type="button" onclick="document.getElementById('modalNewProfile').style.display='block';" id="createProfile">Inserisci un nuovo utente</button>
                     <?php require_once '../../partials/modal-new-user.php'; ?>
+                    <br><br>
+                    <button class="w3-button w3-orange" style="width: 200px;" type="button" onclick="document.getElementById('modalDeleteUser').style.display='block';" id="deleteProfile">Elimina un utente</button>
+                    <?php require_once '../../partials/modal-delete-user.php'; ?>
                 </div><hr>
                 <br>
                 <div class="w3-container" id="alert">
