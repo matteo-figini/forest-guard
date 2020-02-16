@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     else {
         // Puoi modificare tutti gli utenti
         $query = "UPDATE utenti SET Nome='".$_POST["primo_nome"]."', Cognome='".$_POST["cognome"]."', Email='".$_POST["email"]."', Username='".$_POST["username"]."', Password='".$password;
-        if ($_POST["parco"] == "NULL")
+        if ($_POST["tipo_utente"] == "Super amministratore")
             $query .= "', Tipo_utente='".$_POST["tipo_utente"]."' WHERE ID_utente='".$_POST["id"]."' ";
         else
             $query .= "', Tipo_utente='".$_POST["tipo_utente"]."', Parco_assegnato='".$_POST["parco"]."' WHERE ID_utente='".$_POST["id"]."' ";
