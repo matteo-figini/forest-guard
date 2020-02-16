@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $_SESSION["TipoUtente"] != "Guardiap
                 }
             }
             echo "</select>";
-            echo "<p>Parco assegnato: </p><select name=\"parco\" data-selected=\"".$row["Parco_assegnato"]."\"><option value=\"\"></option>";
+            echo "<p>Parco assegnato: </p><select name=\"parco\" data-selected=\"".$row["Parco_assegnato"]."\">";
             foreach ($parchi as $value) {
                 if ($row["Parco_assegnato"] == $value) {
                     echo "<option value=\"".$value."\" selected=\"selected\">".$value."</option>";
